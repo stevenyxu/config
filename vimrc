@@ -1,4 +1,9 @@
 set nocompatible
+filetype off
+
+set rtp+=$HOME/config/vim/
+
+colorscheme wombat
 
 " Set indent options
 set autoindent
@@ -9,7 +14,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=4
 set expandtab
-set list on
 set tabstop=8
 
 " Show search matches
@@ -38,3 +42,9 @@ set autoread
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
+
+set rtp+=$HOME/config/vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'https://github.com/tpope/vim-rails.git'
+Bundle 'https://github.com/kchmck/vim-coffee-script.git'
