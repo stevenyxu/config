@@ -43,7 +43,7 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-set rtp+=$HOME/config/vim/bundle/vundle/
+set rtp+=$HOME/config/vim/vundle/
 call vundle#rc()
 
 Bundle 'https://github.com/tpope/vim-rails.git'
