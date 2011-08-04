@@ -48,3 +48,4 @@ call vundle#rc()
 
 Bundle 'https://github.com/tpope/vim-rails.git'
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
+Bundle 'https://github.com/tpope/vim-haml.git'
