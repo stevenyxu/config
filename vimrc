@@ -4,6 +4,7 @@ filetype off
 set rtp+=$HOME/config/vim/
 
 colorscheme wombat
+set guifont=Monospace\ 8
 
 " Set indent options
 set autoindent
