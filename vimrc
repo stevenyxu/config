@@ -1,14 +1,18 @@
 set nocompatible
+
 filetype off
 
-set rtp+=$HOME/config/vim/
+source $HOME/config/vim/pathogen.vim
 
 colorscheme wombat
 set guifont=Monospace\ 8
 
+set rtp+=$HOME/config/vim/
+
 " Set indent options
 set autoindent
 set smartindent
+set list
 
 " Set tab options
 set tabstop=2
@@ -41,12 +45,6 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-set rtp+=$HOME/config/vim/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-haml'
-Bundle 'kchmck/vim-coffee-script'
-
+call pathogen#infect('~/config/vim/bundle')
+syntax on
 filetype plugin indent on
