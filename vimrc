@@ -2,9 +2,9 @@ set nocompatible
 
 filetype off
 
+source $HOME/config/vim/colors/wombat.vim
 source $HOME/config/vim/pathogen.vim
 
-colorscheme wombat
 set guifont=Monospace\ 8
 
 set rtp+=$HOME/config/vim/
