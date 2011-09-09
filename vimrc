@@ -13,12 +13,12 @@ set rtp+=$HOME/config/vim/
 set autoindent
 set smartindent
 set list
+au FileType ruby setl expandtab softtabstop=2
 
 " Set tab options
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set softtabstop=4
-set expandtab
 set tabstop=4
 
 " Show search matches
