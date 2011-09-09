@@ -45,6 +45,9 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
+" Useful aliases
+map //  :nohlsearch<CR>
+
 call pathogen#infect('~/config/vim/bundle')
 syntax on
 filetype plugin indent on
