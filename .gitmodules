@@ -9,7 +9,7 @@
 	url = git://github.com/tpope/vim-rails.git
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
-	url = https://github.com/tpope/vim-haml.git
+	url = git://github.com/tpope/vim-haml.git
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
 	url = git://github.com/mhz/vim-matchit.git
