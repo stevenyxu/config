@@ -14,4 +14,4 @@ alias ssie='ss --ignore-externals | grep "^[^X]"'
 
 alias opxdev='ssh deploy@opxdev'
 alias devoe='ssh deploy@devoe01.lan.flt'
-alias stgdeploy='ssh deploy@stgdeploy1'
+alias stgdeploy='ssh deploy@rshbgdeploy1'
