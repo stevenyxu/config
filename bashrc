@@ -11,6 +11,8 @@ alias c4='c3; c1'
 alias sd='svn di'
 alias ss='svn st'
 alias ssie='ss --ignore-externals | grep "^[^X]"'
+alias spse='svn pe svn:externals'
+alias spsi='svn pe svn:ignore'
 
 alias opxdev='ssh deploy@opxdev'
 alias devoe='ssh deploy@devoe01.lan.flt'
