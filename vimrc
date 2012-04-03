@@ -54,3 +54,6 @@ map //  :nohlsearch<CR>
 call pathogen#infect('~/config/vim/bundle')
 syntax on
 filetype plugin indent on
+
+" Custom filetypes
+au BufRead,BufNewFile *.as set filetype=actionscript
