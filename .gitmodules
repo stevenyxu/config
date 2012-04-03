@@ -13,3 +13,6 @@
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
 	url = git://github.com/mhz/vim-matchit.git
+[submodule "vim/bundle/vim-actionscript"]
+	path = vim/bundle/vim-actionscript
+	url = git://github.com/vim-scripts/actionscript.vim--Leider.git
