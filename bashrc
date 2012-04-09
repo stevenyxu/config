@@ -1,7 +1,7 @@
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
 alias l='ls'
-alias ll='l -l'
-alias la='l -la'
+alias ll='ls -l'
+alias la='ls -la'
 
 alias c1='cd ../'
 alias c2='c1; c1'
