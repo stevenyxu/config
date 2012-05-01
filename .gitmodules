@@ -22,3 +22,9 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim-command-t"]
+	path = vim-command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "vim/bundle/vim-command-t"]
+	path = vim/bundle/vim-command-t
+	url = git://git.wincent.com/command-t.git
