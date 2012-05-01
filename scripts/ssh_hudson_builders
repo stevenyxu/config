@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cssh user@hudsonBuilder1.lan.flt user@hudsonBuilder2.lan.flt user@hudsonBuilder3.lan.flt user@hudsonBuilder4.lan.flt
