@@ -5,7 +5,7 @@ filetype off
 source $HOME/config/vim/colors/wombat.vim
 source $HOME/config/vim/pathogen.vim
 
-set guifont=Monospace\ 8
+set guifont=Monospace\ 9
 
 set rtp+=$HOME/config/vim/
 
@@ -48,8 +48,19 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
+set guioptions-=T
+set guioptions-=L
+set guioptions-=l
+set guioptions-=r
+set guioptions-=R
+
 " Useful aliases
 map //  :nohlsearch<CR>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+imap jj <Esc>
 
 call pathogen#infect('~/config/vim/bundle')
 syntax on
