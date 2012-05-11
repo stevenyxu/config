@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+include FileUtils # mwahahahah
+
+visited_paths = []
+
+while true
+  raise 'FAILURE: HIT ROOT' if pwd == '/'
+  raise "FAILURE: IN A LOOP WITH #{pwd}" if visited_paths.include?(pwd)
+
+  visited_paths << pwd
+
+  if File.exists?("#{pwd}/config/environment.rb")
+    touch 'tmp/restart.txt'
+    puts "Touched #{pwd}/tmp/restart.txt"
+    exit(0)
+  end
+
+  cd '..'
+end
