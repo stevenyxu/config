@@ -16,9 +16,14 @@ alias suie='svn up --ignore-externals'
 alias ssie='ss --ignore-externals | grep "^[^X]"'
 alias spse='svn pe svn:externals'
 alias spsi='svn pe svn:ignore'
+alias sdsm='svn pd svn:mime-type'
+
+alias uatt='find . | xargs dos2unix'
 
 alias opxdev='ssh deploy@opxdev'
+alias sxuopxdev='ssh sxu@opxdev'
 alias devoe='ssh deploy@devoe01.lan.flt'
+alias sxudevoe='ssh sxu@devoe01.lan.flt'
 alias stgdeploy='ssh deploy@rshbgdeploy1'
 alias devrmsvc='ssh deploy@devrmsvc00.lan.flt'
 
