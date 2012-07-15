@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "
+# personal configs
+source \$HOME/config/bashrc" >> $HOME/.bashrc
+echo "
+\" personal configs
+source \$HOME/config/vimrc" >> $HOME/.vimrc
+
+mkdir -p $HOME/.vim/backup
+mkdir -p $HOME/.vim/tmp
