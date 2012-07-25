@@ -25,6 +25,8 @@ alias sxuopxdev='ssh sxu@opxdev'
 alias devoe='ssh deploy@devoe01.lan.flt'
 alias sxudevoe='ssh sxu@devoe01.lan.flt'
 alias stgdeploy='ssh deploy@rshbgdeploy1'
+alias sxudevfms='ssh sxu@devfms00.lan.flt'
+alias sxudevrmsvc='ssh sxu@devrmsvc00.lan.flt'
 alias devrmsvc='ssh deploy@devrmsvc00.lan.flt'
 
 alias tf='tail -f'
