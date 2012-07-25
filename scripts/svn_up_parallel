@@ -1,15 +1,23 @@
 #!/usr/bin/env ruby
 
-puts(
-  ( `svn pl -R`.scan(/\S.*'(.*)':\n((?:  .*\n)+)/)\
-   .inject({}) { |h, (d, p)| h[d] = p.strip.split(/\s+/); h }\
-   .select { |d, ps| ps.include? 'svn:externals' }\
-   .map { |xd, ps| [xd, `svn pg svn:externals #{xd}|grep -v ^#`] }\
-   .map { |xd, exts| exts.strip.split(/\s*\n/).map { |l| xd + '/' + l.split(/\s+/).first } }\
-   .inject { |a, b| a + b }\
-   .map { |d| "cd #{d} && svn up 2>&1" } \
-   << 'svn up . --ignore-externals 2>&1'
-  )\
-    .map { |cmd| [cmd, Thread.new { `#{cmd}` }] }\
-    .map { |cmd, thread| "#{cmd}\n#{thread.value}" }.join("\n")
-)
+def run(cmd)
+  puts "#{cmd}\n#{`#{cmd}`}\n"
+end
+
+cmd = 'svn up . --ignore-externals 2>&1'
+run(cmd)
+
+commands = ( `svn pl -R`.scan(/\S.*'(.*)':\n((?:  .*\n)+)/)\
+            .inject({}) { |h, (d, p)| h[d] = p.strip.split(/\s+/); h }\
+            .select { |d, ps| ps.include? 'svn:externals' }\
+            .map { |xd, ps| [xd, `svn pg svn:externals #{xd}|grep -v ^#`] }\
+            .map { |xd, exts| exts.strip.split(/\s*\n/).map { |l| xd + '/' + l.split(/\s+/).first } }\
+            .inject { |a, b| a + b }\
+            .map { |d| "cd #{d} && svn up 2>&1" }
+           )
+
+commands.map do |cmd|
+  Thread.new do
+    run(cmd)
+  end
+end.each(&:join)
