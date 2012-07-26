@@ -60,3 +60,4 @@ alias s='svn'
 # hot scripts
 export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
+alias sup='ssh_up_parallel'
