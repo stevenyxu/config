@@ -7,17 +7,19 @@ end
 cmd = 'svn up . --ignore-externals 2>&1'
 run(cmd)
 
-commands = ( `svn pl -R`.scan(/\S.*'(.*)':\n((?:  .*\n)+)/)\
-            .inject({}) { |h, (d, p)| h[d] = p.strip.split(/\s+/); h }\
-            .select { |d, ps| ps.include? 'svn:externals' }\
-            .map { |xd, ps| [xd, `svn pg svn:externals #{xd}|grep -v ^#`] }\
-            .map { |xd, exts| exts.strip.split(/\s*\n/).map { |l| xd + '/' + l.split(/\s+/).first } }\
-            .inject { |a, b| a + b }\
-            .map { |d| "cd #{d} && svn up 2>&1" }
-           )
+proplist = `svn pl -R`.scan(/\S.*'(.*)':\n((?:  .*\n)+)/)
+prophash = proplist.inject({}) { |h, (d, p)| h[d] = p.strip.split(/\s+/); h }
+exthash = prophash.select { |d, ps| ps.include? 'svn:externals' }
+exts = exthash.map { |xd, ps| [xd, `svn pg svn:externals #{xd}|grep -v ^#`] }
+filtered_exts = exts.map { |xd, exts| exts.strip.split(/\s*\n/).map { |l| xd + '/' + l.split(/\s+/).first } }
+final_exts = filtered_exts.inject { |a, b| a + b }
 
-commands.map do |cmd|
-  Thread.new do
-    run(cmd)
-  end
-end.each(&:join)
+if final_exts
+  require 'fileutils'
+  commands = final_exts.map { |d| "cd #{File.expand_path File.join(FileUtils.pwd, d)} && #{__FILE__}" }
+  commands.map do |cmd|
+    Thread.new do
+      run(cmd)
+    end
+  end.each(&:join)
+end
