@@ -17,6 +17,8 @@ alias ssie='ss --ignore-externals | grep "^[^X]"'
 alias spse='svn pe svn:externals'
 alias spsi='svn pe svn:ignore'
 alias sdsm='svn pd svn:mime-type'
+alias svn_rm_missing='ssie | grep ^! | sed 's/^[^a-z]*//' | xargs svn rm'
+alias svn_add_unknown='ssie | grep ^? | sed 's/^[^a-z]*//' | xargs svn add'
 
 alias uatt='find . | xargs dos2unix'
 
@@ -60,4 +62,4 @@ alias s='svn'
 # hot scripts
 export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
-alias sup='ssh_up_parallel'
+alias sup='svn_up_parallel'
