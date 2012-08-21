@@ -27,7 +27,8 @@ alias sxuopxdev='ssh sxu@opxdev'
 alias devoe='ssh deploy@devoe01.lan.flt'
 alias sxudevoe='ssh sxu@devoe01.lan.flt'
 alias stgdeploy='ssh deploy@rshbgdeploy1'
-alias sxudevfms='ssh sxu@devfms00.lan.flt'
+alias sxudevfms00='ssh sxu@devfms00.lan.flt'
+alias sxudevfms01='ssh sxu@devfms01.lan.flt'
 alias sxudevrmsvc='ssh sxu@devrmsvc00.lan.flt'
 alias devrmsvc='ssh deploy@devrmsvc00.lan.flt'
 
@@ -63,3 +64,5 @@ alias s='svn'
 export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
 alias sup='svn_up_parallel'
+
+set -o vi
