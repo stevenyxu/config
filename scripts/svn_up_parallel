@@ -4,7 +4,7 @@ def run(cmd)
   puts "#{cmd}\n#{`#{cmd}`}\n"
 end
 
-cmd = 'svn up . --ignore-externals 2>&1'
+cmd = 'svn up . --ignore-externals --non-interactive 2>&1'
 run(cmd)
 
 proplist = `svn pl -R`.scan(/\S.*'(.*)':\n((?:  .*\n)+)/)
