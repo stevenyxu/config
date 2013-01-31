@@ -39,6 +39,7 @@ alias sxudevfms01='ssh sxu@devfms01.lan.flt'
 alias sxudevrmsvc='ssh sxu@devrmsvc00.lan.flt'
 alias devrmsvc='ssh deploy@devrmsvc00.lan.flt'
 alias sxustgrmsvc='ssh sxu@stgrmsvc00.lan.flt'
+alias stgrmsvc='ssh deploy@stgrmsvc00.lan.flt'
 alias sxudevejabberd0='ssh sxu@devejabberd0.lan.flt'
 alias sxudevejabberd1='ssh sxu@devejabberd1.lan.flt'
 
