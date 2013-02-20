@@ -31,3 +31,9 @@
 [submodule "vim/bundle/vim-align"]
 	path = vim/bundle/vim-align
 	url = https://github.com/vim-scripts/Align.git
+[submodule "vim/bundle/vim-ctrlp"]
+	path = vim/bundle/vim-ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
