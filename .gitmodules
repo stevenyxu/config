@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/vim-editorconfig"]
+	path = vim/bundle/vim-editorconfig
+	url = git://github.com/editorconfig/editorconfig-vim.git
