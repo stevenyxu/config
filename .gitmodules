@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-web-indent"]
 	path = vim/bundle/vim-web-indent
 	url = git://github.com/vim-scripts/JavaScript-Indent.git
+[submodule "vim/bundle/vim-thrift"]
+	path = vim/bundle/vim-thrift
+	url = git://github.com/sprsquish/thrift.vim.git
