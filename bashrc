@@ -88,3 +88,8 @@ alias ttr='touch_tmp_restart'
 alias sup='svn_up_parallel'
 
 set -o vi
+
+PS1="\u@\h \w\a$ "
+title(){
+  echo -en "\033]0;$1\a"
+}
