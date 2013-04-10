@@ -54,12 +54,14 @@ set guioptions-=l
 set guioptions-=r
 set guioptions-=R
 
+set cul
+
 " Useful aliases
 map //  :nohlsearch<CR>
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 imap jj <Esc>
 
 call pathogen#infect('~/config/vim/bundle')
