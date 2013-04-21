@@ -9,3 +9,5 @@ source \$HOME/config/vimrc" >> $HOME/.vimrc
 
 mkdir -p $HOME/.vim/backup
 mkdir -p $HOME/.vim/tmp
+
+git submodule update --init
