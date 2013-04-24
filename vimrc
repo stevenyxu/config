@@ -4,6 +4,7 @@ filetype off
 
 source $HOME/config/vim/colors/wombat.vim
 source $HOME/config/vim/pathogen.vim
+source $HOME/config/vim/eol.vim
 
 set guifont=Monospace\ 9
 
