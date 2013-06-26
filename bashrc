@@ -91,7 +91,7 @@ set -o vi
 
 if (uname -a | grep -q -i -v darwin)
 then
-  PS1="\u@\h \w\a$ "
+  PS1="\u@\h \w$ "
 fi
 
 title(){
