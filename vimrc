@@ -71,3 +71,9 @@ filetype plugin indent on
 
 " Custom filetypes
 au BufRead,BufNewFile *.as set filetype=actionscript
+
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\v[\/](tmp|(\.(git|hg|svn)))$',
+      \ 'file': '\v\.(png|jpg|gif)$',
+      \ }
