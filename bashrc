@@ -89,7 +89,11 @@ alias sup='svn_up_parallel'
 
 set -o vi
 
-PS1="\u@\h \w$ "
+if (uname -a | grep -q -i -v darwin)
+then
+  PS1="\u@\h \w$ "
+fi
+
 title(){
   echo -en "\033]0;$1\a"
 }

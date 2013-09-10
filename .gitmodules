@@ -52,6 +52,3 @@
 [submodule "vim/bundle/vim-handlebars"]
 	path = vim/bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
-[submodule "vim/bundle/vim-covim"]
-	path = vim/bundle/vim-covim
-	url = git://github.com/FredKSchott/CoVim.git
