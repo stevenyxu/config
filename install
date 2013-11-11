@@ -2,7 +2,7 @@
 
 cd ~
 sudo apt-get install -y git vim
-git clone git@github.com:cairo140/config.git
+git clone https://github.com/cairo140/config.git
 
 echo "
 # personal configs
