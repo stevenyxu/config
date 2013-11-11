@@ -2,7 +2,7 @@
 
 cd ~
 sudo apt-get install -y git vim
-git clone https://github.com/cairo140/config.git
+[ -d config ] || git clone https://github.com/cairo140/config.git
 
 echo "
 # personal configs
@@ -14,4 +14,5 @@ source \$HOME/config/vimrc" >> $HOME/.vimrc
 mkdir -p $HOME/.vim/backup
 mkdir -p $HOME/.vim/tmp
 
+cd config
 git submodule update --init
