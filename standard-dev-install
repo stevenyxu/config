@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install python-software-properties python g++ make curl nodejs
+type rvm >/dev/null 2>&1 || curl -L https://get.rvm.io | bash
