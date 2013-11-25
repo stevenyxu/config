@@ -36,7 +36,7 @@
 	url = https://github.com/vim-scripts/grep.vim
 [submodule "vim/bundle/vim-web-indent"]
 	path = vim/bundle/vim-web-indent
-	url = git://github.com/vim-scripts/JavaScript-Indent.git
+	url = git://github.com/cairo140/JavaScript-Indent.git
 [submodule "vim/bundle/vim-thrift"]
 	path = vim/bundle/vim-thrift
 	url = git://github.com/sprsquish/thrift.vim.git
