@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-handlebars"]
 	path = vim/bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/bundle/JavaScript-Indent"]
+	path = vim/bundle/JavaScript-Indent
+	url = git@github.com:cairo140/JavaScript-Indent.git
