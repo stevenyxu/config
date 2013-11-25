@@ -87,8 +87,6 @@ export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
 alias sup='svn_up_parallel'
 
-set -o vi
-
 if (uname -a | grep -q -i -v darwin)
 then
   PS1="\u@\h \w$ "
