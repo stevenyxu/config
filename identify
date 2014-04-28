@@ -1,7 +1,0 @@
-#!/bin/bash
-
-git config --global user.name "Steven Xu"
-git config --global user.email steven@stevenxu.ca
-
-cd $HOME/config
-git set-url origin git@github.com:cairo140/config.git
