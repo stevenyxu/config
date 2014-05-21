@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install python-software-properties python g++ make curl nodejs phantomjs git
+
+# Configure git
+git config --global user.email "steven@stevenxu.ca"
+git config --global user.name "Steven Xu"
+git config --global push.default simple
+
+# Install Ruby
+type rvm >/dev/null 2>&1 || curl -L https://get.rvm.io | bash
+source ~/.bashrc
+source ~/.bash_profile
+rvm install 2.1

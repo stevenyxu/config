@@ -13,21 +13,12 @@
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "vim/bundle/vim-actionscript"]
-	path = vim/bundle/vim-actionscript
-	url = git@github.com:cairo140/actionscript.vim.git
 [submodule "vim/bundle/vim-endwise"]
 	path = vim/bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim-command-t"]
-	path = vim-command-t
-	url = git://git.wincent.com/command-t.git
-[submodule "vim/bundle/vim-command-t"]
-	path = vim/bundle/vim-command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "vim/bundle/vim-align"]
 	path = vim/bundle/vim-align
 	url = https://github.com/vim-scripts/Align.git
@@ -43,12 +34,6 @@
 [submodule "vim/bundle/vim-grep"]
 	path = vim/bundle/vim-grep
 	url = https://github.com/vim-scripts/grep.vim
-[submodule "vim/bundle/vim-web-indent"]
-	path = vim/bundle/vim-web-indent
-	url = git://github.com/vim-scripts/JavaScript-Indent.git
-[submodule "vim/bundle/vim-thrift"]
-	path = vim/bundle/vim-thrift
-	url = git://github.com/sprsquish/thrift.vim.git
-[submodule "vim/bundle/vim-handlebars"]
-	path = vim/bundle/vim-handlebars
-	url = git://github.com/nono/vim-handlebars.git
+[submodule "vim/bundle/JavaScript-Indent"]
+	path = vim/bundle/JavaScript-Indent
+	url = git@github.com:cairo140/JavaScript-Indent.git
