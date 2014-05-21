@@ -50,7 +50,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
 set guioptions-=T
-set guioptions-=L
+set guioptions-=Line
 set guioptions-=l
 set guioptions-=r
 set guioptions-=R
@@ -71,9 +71,18 @@ filetype plugin indent on
 
 " Custom filetypes
 au BufRead,BufNewFile *.as set filetype=actionscript
+au BufNewFile,BufRead *.phtml set filetype=phtml " PHP overrides this for some dumb reason. PHTML has better formatting.
 
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_files=20000
 let g:ctrlp_custom_ignore = {
-      \ 'dir': '\v[\/](tmp|(\.(git|hg|svn)))$',
-      \ 'file': '\v\.(png|jpg|gif)$',
+      \ 'dir': '\v[\/](bower_components|node_modules|tmp|dist|shop\/var|(\.(git|hg|svn|tmp)))$',
+      \ 'file': '\v\.(png|jpg|gif|jpeg|zip|tiff|pdf|swf)$',
       \ }
+let g:ctrlp_user_command = {
+	\ 'types': {
+		\ 1: ['.git', 'cd %s && git ls-files --exclude-standard -co | grep -v "\\.\\(jpg\|gif\|png\|jpeg\|pdf\|tiff\\)$" | grep -v "^shop/var" | grep -v "^boss/expressionengine/templates"'],
+		\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+		\ },
+	\ 'fallback': 'find %s -type f'
+	\ }
