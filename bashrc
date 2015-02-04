@@ -93,5 +93,7 @@ then
 fi
 
 title(){
-  echo -en "\033]0;$1\a"
+  # old
+  # echo -en "\033]0;$1\a"
+  PROMPT_COMMAND="echo -ne '\033]0;$1\007'"
 }
