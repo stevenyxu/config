@@ -76,7 +76,7 @@ au BufNewFile,BufRead *.phtml set filetype=phtml " PHP overrides this for some d
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files=20000
 let g:ctrlp_custom_ignore = {
-      \ 'dir': '\v[\/](bower_components|node_modules|tmp|dist|shop\/var|(\.(git|hg|svn|tmp)))$',
+      \ 'dir': '\v[\/](node_modules|tmp|dist|shop\/var|(\.(git|hg|svn|tmp)))$',
       \ 'file': '\v\.(png|jpg|gif|jpeg|zip|tiff|pdf|swf)$',
       \ }
 let g:ctrlp_user_command = {
