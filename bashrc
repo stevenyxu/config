@@ -86,6 +86,7 @@ alias s='svn'
 export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
 alias sup='svn_up_parallel'
+alias deploy='ssh deploy@deploy.tatcha.com'
 
 if (uname -a | grep -q -i -v darwin)
 then
