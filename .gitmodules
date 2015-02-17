@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-javascript-syntax"]
 	path = vim/bundle/vim-javascript-syntax
 	url = git@github.com:jelera/vim-javascript-syntax.git
+[submodule "vim/bundle/vim-jade"]
+	path = vim/bundle/vim-jade
+	url = git@github.com:digitaltoad/vim-jade.git
