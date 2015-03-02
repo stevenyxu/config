@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
 	url = git@github.com:digitaltoad/vim-jade.git
+[submodule "bash/z"]
+	path = bash/z
+	url = git@github.com:rupa/z.git

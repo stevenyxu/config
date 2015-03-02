@@ -17,4 +17,6 @@ mkdir -p $HOME/.vim/tmp
 cd config
 git submodule update --init
 
-. $HOME/.bashrc
+$(cd bash/z && make)
+
+source $HOME/.bashrc

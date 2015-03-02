@@ -82,6 +82,8 @@ alias g='git'
 
 alias s='svn'
 
+source $HOME/config/bash/z/z.sh
+
 # hot scripts
 export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
