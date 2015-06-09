@@ -3,12 +3,22 @@ set nocompatible
 filetype off
 
 source $HOME/config/vim/colors/wombat.vim
-source $HOME/config/vim/pathogen.vim
 source $HOME/config/vim/eol.vim
 
 set guifont=Monospace\ 9
 
-set rtp+=$HOME/config/vim/
+set rtp+=$HOME/config/vim
+
+set rtp+=$HOME/config/vim/autoload
+call plug#begin()
+Plug 'digitaltoad/vim-jade'
+Plug 'editorconfig/editorconfig-vim' " editorconfig.org
+Plug 'jelera/vim-javascript-syntax'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' } " File globber
+Plug 'tpope/vim-endwise' " Add end to if blocks automatically
+Plug 'tpope/vim-sensible' " Sensible defaults
+Plug 'tpope/vim-surround' " Actions based on surroundings cs\"'
+call plug#end()
 
 " Set indent options
 set autoindent
@@ -65,7 +75,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 imap jj <Esc>
 
-call pathogen#infect('~/config/vim/bundle')
 syntax on
 filetype plugin indent on
 

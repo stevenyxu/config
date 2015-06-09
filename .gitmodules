@@ -1,48 +1,6 @@
 [submodule "vim/vundle"]
 	path = vim/vundle
 	url = git://github.com/gmarik/vundle.git
-[submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "vim/bundle/vim-rails"]
-	path = vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/vim-haml"]
-	path = vim/bundle/vim-haml
-	url = git://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/vim-matchit"]
-	path = vim/bundle/vim-matchit
-	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "vim/bundle/vim-endwise"]
-	path = vim/bundle/vim-endwise
-	url = https://github.com/tpope/vim-endwise.git
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/vim-align"]
-	path = vim/bundle/vim-align
-	url = https://github.com/vim-scripts/Align.git
-[submodule "vim/bundle/vim-ctrlp"]
-	path = vim/bundle/vim-ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/vim-ruby"]
-	path = vim/bundle/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/bundle/vim-editorconfig"]
-	path = vim/bundle/vim-editorconfig
-	url = git://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim/bundle/vim-grep"]
-	path = vim/bundle/vim-grep
-	url = https://github.com/vim-scripts/grep.vim
-[submodule "vim/bundle/JavaScript-Indent"]
-	path = vim/bundle/JavaScript-Indent
-	url = git@github.com:cairo140/JavaScript-Indent.git
-[submodule "vim/bundle/vim-javascript-syntax"]
-	path = vim/bundle/vim-javascript-syntax
-	url = git@github.com:jelera/vim-javascript-syntax.git
-[submodule "vim/bundle/vim-jade"]
-	path = vim/bundle/vim-jade
-	url = git@github.com:digitaltoad/vim-jade.git
 [submodule "bash/z"]
 	path = bash/z
 	url = git@github.com:rupa/z.git

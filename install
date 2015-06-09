@@ -17,6 +17,10 @@ mkdir -p $HOME/.vim/tmp
 cd config
 git submodule update --init
 
+git config --global user.email "steven@stevenxu.ca"
+git config --global user.name "Steven Xu"
+
+source $HOME/config/bash/z/z.sh
 $(cd bash/z && make)
 
 source $HOME/.bashrc
