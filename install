@@ -15,7 +15,6 @@ mkdir -p $HOME/.vim/backup
 mkdir -p $HOME/.vim/tmp
 
 cd config
-git submodule update --init
 
 git config --global user.email "steven@stevenxu.ca"
 git config --global user.name "Steven Xu"
