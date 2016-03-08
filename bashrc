@@ -82,6 +82,8 @@ alias g='git'
 
 alias s='svn'
 
+alias t='echo $TERM'
+
 source $HOME/config/bash/z/z.sh
 
 # hot scripts

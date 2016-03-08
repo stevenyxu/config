@@ -4,6 +4,9 @@ filetype off
 
 source $HOME/config/vim/colors/wombat.vim
 source $HOME/config/vim/eol.vim
+if filereadable('/usr/share/vim/google/google.vim')
+  source /usr/share/vim/google/google.vim
+endif
 
 set guifont=Monospace\ 9
 
@@ -53,6 +56,7 @@ syntax on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+au FocusGained,BufEnter * :silent! !
 
 " Set backup and swapfile options
 set backup
@@ -66,6 +70,9 @@ set guioptions-=r
 set guioptions-=R
 
 set cul
+
+" Hyphens are parts of words
+set iskeyword+=-
 
 " Useful aliases
 map //  :nohlsearch<CR>
