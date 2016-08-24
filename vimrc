@@ -22,6 +22,7 @@ Plug 'tpope/vim-endwise' " Add end to if blocks automatically
 Plug 'tpope/vim-sensible' " Sensible defaults
 Plug 'tpope/vim-surround' " Actions based on surroundings cs\"'
 Plug 'leafgarland/typescript-vim' " Typescript
+Plug 'terryma/vim-multiple-cursors' " Multiple cursors
 call plug#end()
 
 " Set indent options
