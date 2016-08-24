@@ -1,25 +1,33 @@
 #!/bin/bash
 
 cd ~
-sudo apt-get install -y git vim
-[ -d config ] || git clone https://github.com/cairo140/config.git
+if [ ! -d config ]; then
+  git clone git@github.com:cairo140/config.git
+fi
 
-echo "
-# personal configs
-source \$HOME/config/bashrc" >> $HOME/.bashrc
-echo "
-\" personal configs
-source \$HOME/config/vimrc" >> $HOME/.vimrc
+if grep -q '$HOME/config/bashrc' $HOME/.bashrc; then
+  echo "~/config/bashrc already included in ~/.bashrc"
+else
+  echo "
+  # personal configs
+  source \$HOME/config/bashrc" >> $HOME/.bashrc
+fi
+
+if grep -q '$HOME/config/vimrc' $HOME/.vimrc; then
+  echo "~/config/vimrc already included in ~/.vimrc"
+else
+  echo "
+  \" personal configs
+  source \$HOME/config/vimrc" >> $HOME/.vimrc
+fi
 
 mkdir -p $HOME/.vim/backup
 mkdir -p $HOME/.vim/tmp
 
-cd config
-
 git config --global user.email "steven@stevenxu.ca"
 git config --global user.name "Steven Xu"
 
-source $HOME/.bashrc
+cd config
+git submodule update --init
 
-source $HOME/config/bash/z/z.sh
-$(cd bash/z && make)
+echo "Remember to source ~/.bashrc."
