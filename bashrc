@@ -25,40 +25,6 @@ alias ss='sudo su'
 
 alias uatt='find . -type f | xargs dos2unix'
 
-alias sxudevoe='ssh sxu@devoe01.lan.flt'
-alias sxudevlcp='ssh sxu@devlcp00.lan.flt'
-alias sxudevfms00='ssh sxu@devfms00.lan.flt'
-alias sxudevfms01='ssh sxu@devfms01.lan.flt'
-alias sxudevrmsvc='ssh sxu@devrmsvc00.lan.flt'
-alias sxudevejabberd0='ssh sxu@devejabberd0.lan.flt'
-alias sxudevejabberd1='ssh sxu@devejabberd1.lan.flt'
-alias sxudevlcp01='ssh sxu@devlcp01.lan.flt'
-alias sxuopxdev='ssh sxu@opxdev'
-alias opxdev='ssh deploy@opxdev'
-alias devoe='ssh deploy@devoe01.lan.flt'
-alias devlcp='devlcp00'
-alias devlcp00='ssh deploy@devlcp00.lan.flt'
-alias devlcp01='ssh deploy@devlcp01.lan.flt'
-alias rshbgdeploy='ssh deploy@rshbgdeploy1'
-alias devrmsvc='ssh deploy@devrmsvc00.lan.flt'
-alias sxustgrmsvc='ssh sxu@stgrmsvc00.lan.flt'
-alias sxustglcp='ssh sxu@stglcp00.lan.flt'
-alias stgrmsvc='ssh deploy@stgrmsvc00.lan.flt'
-alias stglcp='ssh deploy@stglcp00.lan.flt'
-alias stgdeploy='ssh deploy@stgdeploy1.lan.flt'
-alias stgoe000='ssh deploy@stgoe000.lan.flt'
-alias stgoe001='ssh deploy@stgoe001.lan.flt'
-alias stgoe002='ssh deploy@stgoe002.lan.flt'
-alias stgoe003='ssh deploy@stgoe003.lan.flt'
-
-alias cd_ejabberd_log='cd /usr/local/var/log/ejabberd'
-alias cd_ejabberd_etc='cd /usr/local/etc/ejabberd'
-
-alias tf='tail -f'
-alias tfld='tf log/development.log'
-alias tflt='tf log/test.log'
-alias tflp='tf log/production.log'
-
 alias gs='git status'
 alias ga='git add'
 alias gd='git diff'
@@ -67,8 +33,6 @@ alias gcm='git commit -m'
 alias gcam='git commit -am'
 
 alias cl='curl -x localhost:80'
-
-alias sai='sudo apt-get install'
 
 alias be='bundle exec'
 alias berc='bundle exec rails c'
@@ -84,21 +48,11 @@ alias s='svn'
 
 alias t='echo $TERM'
 
+alias tmux_clip='tmux save-buffer - | xclip -selection clipboard'
+
 source $HOME/config/bash/z/z.sh
 
 # hot scripts
 export PATH=$HOME/config/scripts:$PATH
 alias ttr='touch_tmp_restart'
 alias sup='svn_up_parallel'
-alias deploy='ssh deploy@deploy.tatcha.com'
-
-if (uname -a | grep -q -i -v darwin)
-then
-  PS1="\u@\h \w$ "
-fi
-
-title(){
-  # old
-  # echo -en "\033]0;$1\a"
-  PROMPT_COMMAND="echo -ne '\033]0;$1\007'"
-}
