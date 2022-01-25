@@ -1,16 +1,11 @@
 #!/bin/bash
 
-cd ~
-if [ ! -d config ]; then
-  git clone git@github.com:cairo140/config.git
-fi
-
-if grep -q '$HOME/config/bashrc' $HOME/.bashrc; then
-  echo "~/config/bashrc already included in ~/.bashrc"
+if grep -q '$HOME/config/zshrc' $HOME/.zshrc; then
+  echo "~/config/zshrc already included in ~/.zshrc"
 else
   echo "
   # personal configs
-  source \$HOME/config/bashrc" >> $HOME/.bashrc
+  source \$HOME/config/zshrc" >> $HOME/.zshrc
 fi
 
 if grep -q '$HOME/config/vimrc' $HOME/.vimrc; then
@@ -30,4 +25,4 @@ git config --global user.name "Steven Xu"
 cd config
 git submodule update --init
 
-echo "Remember to source ~/.bashrc."
+echo "Remember to source ~/.zshrc."
