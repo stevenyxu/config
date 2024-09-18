@@ -23,3 +23,41 @@ source $HOME/config/bash/z/z.sh
 
 # hot scripts
 export PATH=$HOME/config/scripts:$HOME/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias u="cd ~/universe"
+alias u2="cd ~/universe2"
+alias u3="cd ~/universe3"
+
+__git_files () {
+    _wanted files expl 'local files' _files
+}
+
+alias gfdm="git fetch databricks master"
+alias gcdm="git checkout databricks/master"
+alias gpdm="git pull databricks master"
+
+ddl () {
+  scp -r devbox.databricks.com:$1 ~/Downloads/
+}
+
+dul () {
+  scp $1 devbox.databricks.com:
+}
+
+ddlo () {
+  ddl $1
+  open ~/Downloads/$(basename $1)
+}
+
+gpo () {
+  if [[ $(git rev-parse --abbrev-ref HEAD) == "HEAD" ]]; then
+    git checkout -b stevenxu-db/$(date +%Y-%m-%d-%H-%M)
+  fi
+  # fork=$(git remote -v | grep origin -m 1 | grep -o ':[^/]*' | cut -c 2-)
+  branch=$(git branch --show-current)
+  git push -u origin "$branch"
+  open "https://github.com/databricks/universe/compare/master...databricks:universe-dev:$branch?expand=1"
+}
+
